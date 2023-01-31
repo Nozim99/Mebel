@@ -235,6 +235,11 @@ tr > td:first-child {
   background: white;
   overflow: auto;
 }
+.cont_otq_item_center{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .cont_download_items {
   font-size: 0.9em;
   color: green;

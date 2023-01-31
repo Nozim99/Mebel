@@ -8,6 +8,7 @@ import DatePicker from "react-datepicker";
 import axios from "axios";
 import { URLS } from "../../url";
 import { setTransaction } from "../../redux/slices/pagesData";
+import LoaderTable from "./extra/LoaderTable";
 
 export default function Transaktion() {
   const dispatch = useDispatch();
@@ -35,20 +36,24 @@ export default function Transaktion() {
           }
         )
         .then((result) => {
-          dispatch(setTransaction(result.data));
+          if (result.data && result.data.transactions) {
+            dispatch(setTransaction(result.data.transactions));
+          }
         })
         .catch((error) => {
           console.error(error);
         });
     } else {
       axios
-        .get(URLS.start + URLS.warehouse_history, {
+        .get(URLS.start + URLS.transactions, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         })
         .then((result) => {
-          dispatch(setTransaction(result.data));
+          if (result.data && result.data.transactions) {
+            dispatch(setTransaction(result.data.transactions));
+          }
         })
         .catch((error) => {
           console.error(error);
@@ -113,26 +118,32 @@ export default function Transaktion() {
                   <th scope="col">To'lov turi</th>
                   <th scope="col">Tranzaksiya turi</th>
                   <th scope="col">Tomonidan bajarildi</th>
-                  <th scope="col">Vaqti</th>
+                  <th scope="col">Bajarilgan vaqti</th>
                 </tr>
               </thead>
               <tbody className="warehouse_tbody">
-                {/* {!warehouseOtherProducts.length ? (
+                {transaction ? (
+                  !transaction.length ? (
                     <tr className="no_data_img_box"></tr>
                   ) : (
-                    warehouseOtherProducts.map((item, index) => {
+                    transaction.map((item, index) => {
                       return (
                         <tr key={index}>
                           <th scope="row">{index + 1}</th>
                           <td>{item.id}</td>
-                          <td>{item.name} </td>
-                          <td>{item.price.toLocaleString("uz-UZ")} so'm </td>
-                          <td>{item.amount} ta</td>
-                          <td>{item.summa.toLocaleString("uz-UZ")} so'm</td>
+                          <td>{item.description ? item.description : "no comment"}</td>
+                          <td>{item.summa.toLocaleString()} so'm</td>
+                          <td>{item.paymentType}</td>
+                          <td>{item.transactionType}</td>
+                          <td>{item.createdBy}</td>
+                          <td>{item.createdAt}</td>
                         </tr>
                       );
                     })
-                  )} */}
+                  )
+                ) : (
+                  <LoaderTable />
+                )}
               </tbody>
             </table>
           </div>

@@ -973,7 +973,10 @@ export default function Contracts() {
       {uploadM ? (
         <div className="cont_otq">
           <div onClick={() => setUploadM(false)} className="cont_otq_bg"></div>
-          <div className="cont_otq_item">
+          <div
+            style={{ height: "15em" }}
+            className="cont_otq_item cont_otq_item_center"
+          >
             <div className="cont_ibh">
               <h5>Hujjat yuklash</h5>
               <FontAwesomeIcon

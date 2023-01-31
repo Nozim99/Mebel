@@ -84,7 +84,7 @@ export const URLS = {
 
   //ADMIN
   admins: "/users/findAll",
-  admin: "/users/findById",
+  admin: "/users/findById/",
   create_admin: "/users/save",
   admin_update: "/users/edit/",
   //ADMIN

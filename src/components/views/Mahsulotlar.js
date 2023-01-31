@@ -73,11 +73,17 @@ export default function Mahsulotlar() {
   }, []);
 
   function create() {
-    console.log("1", String(productName));
-    console.log("2", Number(productPrice.replace(/,/g, "")));
-    console.log("3", String(productDec));
-    console.log("4", +category);
-    console.log("5", image);
+    // console.log("1", String(productName));
+    // console.log("2", Number(productPrice.replace(/,/g, "")));
+    // console.log("3", String(productDec));
+    // console.log("4", +category);
+    // console.log("5", image);
+
+    const formData = new FormData();
+    for (const item of image) {
+      formData.append("images", item);
+    }
+    console.log(formData);
 
     axios
       .post(
@@ -87,7 +93,7 @@ export default function Mahsulotlar() {
           name: String(productName),
           price: Number(productPrice.replace(/,/g, "")),
           description: String(productDec),
-          files: image,
+          files: formData,
         },
         {
           headers: {
@@ -176,6 +182,7 @@ export default function Mahsulotlar() {
           </>
         )}
       </div>
+
       {createModal ? (
         <>
           <div

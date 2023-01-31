@@ -208,6 +208,30 @@ const dataSlice = createSlice({
     setAdminData: (state, { payload }) => {
       state.adminData = payload;
     },
+    addAdminData: (state, { payload }) => {
+      if (state.adminData && state.adminData.length) {
+        const arr = [];
+        state.adminData.forEach((e) => {
+          arr.push(e.id);
+        });
+        const maxId = Math.max(...arr);
+
+        payload.id = maxId || maxId === 0 ? maxId + 1 : 0;
+        state.adminData.push(payload);
+        console.log(payload);
+      } else {
+        payload.id = 0;
+        state.adminData = [payload];
+        console.log(payload);
+      }
+    },
+    updateAdminData: (state, { payload }) => {
+      const idx = state.adminData.findIndex((item) => item.id === payload[0]);
+
+      state.adminData[idx].username = payload[1];
+      state.adminData[idx].name = payload[2];
+      state.adminData[idx].phone = payload[3];
+    },
     setTransaction: (state, { payload }) => {
       state.transaction = payload;
     },
@@ -232,6 +256,8 @@ export const {
   resetCheckoutData,
   payCheckoutData,
   setAdminData,
+  addAdminData,
+  updateAdminData,
   addContractTermsData,
   changeContractTermsData,
   addCargoData,

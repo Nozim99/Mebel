@@ -21,7 +21,7 @@ const configSlice = createSlice({
     changeData: (state, { payload }) => {
       state.data.name = payload[0];
       state.data.price = +payload[1];
-      state.data.desription = payload[2];
+      state.data.description = payload[2];
     },
     setData: (state, { payload }) => {
       state.data = payload;

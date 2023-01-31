@@ -67,10 +67,8 @@ export default function Clients() {
   const [changeAddressClass, setChangeAddressClass] = useState();
   const [changePhoneNumberClass, setChangePhoneNumberClass] = useState();
   const [changeOccupationClass, setChangeOccupationClass] = useState();
-  const [changePhoneSecondNumberClass, setChangePhoneSecondNumberClass] =
-    useState();
-  const [changePhoneThirdNumberClass, setChangePhoneThirdNumberClass] =
-    useState();
+  const [changePhoneSecondNumberClass, setChangePhoneSecondNumberClass] = useState();
+  const [changePhoneThirdNumberClass, setChangePhoneThirdNumberClass] = useState();
 
   function saveClientData(id) {
     setClientData();

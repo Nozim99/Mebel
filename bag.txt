@@ -1,0 +1,6 @@
+1. Mahsulotlar / Mahsulotlar yaratish / Mahsulot rasmi
+2. Shartnomalar ro'yhati / Hujjat yuklash
+3. Asosiy / Kassa. Kassaga pul kiritilganda 2 barobar pul qo'shilyabdi
+
+
+1) Yetkazib beruvchi ro'yxati / To'lov qilish / input serverga moslanmagan

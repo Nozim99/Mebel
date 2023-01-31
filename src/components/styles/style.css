@@ -1,0 +1,293 @@
+.category_items_name {
+  width: 100%;
+  box-sizing: border-box;
+}
+.category_items_name > div {
+  display: inline-block;
+  width: 49%;
+  padding: 1em 0;
+}
+.category_items_name > div:first-child {
+  padding-left: 1em;
+}
+.category_names {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+.category_num {
+  margin-right: 2em;
+  color: rgb(68, 68, 68);
+}
+.clients_item,
+.clients_header_names {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1em solid rgb(117, 117, 117);
+  padding: 1em 2em;
+}
+.clients_header_names {
+  font-weight: 500;
+}
+.clients_item {
+  border-color: rgb(204, 204, 204);
+}
+.clients_items > div {
+  width: 16.5%;
+  display: flex;
+  align-items: center;
+}
+.clients_item_btn {
+  padding: 0.7em 1.6em;
+  background-color: #fb923c;
+  border: 0.1em solid;
+  color: white;
+  letter-spacing: 0.05em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: background-color 200ms, box-shadow 400ms, transform 50ms;
+}
+.clients_item_btn:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 1em 0.1em #fb923c;
+  border-color: #fb923c;
+}
+.contract_download_btn {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  background: #fb923c;
+  color: white;
+  border: none;
+}
+.contract_download_btn:hover {
+  background: #ff8826;
+}
+.contracts_items {
+  font-size: 0.85em;
+  height: 36em;
+}
+.cargo_btn_svg {
+  color: rgb(230, 230, 230);
+}
+.warehouse_tbody {
+  position: relative;
+}
+.no_data_img_box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20em;
+  height: 20em;
+  background-image: url("https://t4.ftcdn.net/jpg/04/72/65/73/360_F_472657366_6kV9ztFQ3OkIuBCkjjL8qPmqnuagktXU.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.no_data_img_box_table {
+  height: 10em;
+}
+.no_data_img_box_td {
+  width: 10em;
+  height: 10em;
+}
+.warehouse_two_btns {
+  margin-left: 2.6em;
+}
+.warehouse_two_btn {
+  padding: 0.2em 1em;
+  border-radius: 0.25em;
+  margin-right: 1em;
+  border: 0.1em solid rgb(116, 116, 116);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: rgb(53, 53, 53);
+  background: white;
+}
+.warehouse_two_btn.active {
+  border-color: #007751;
+  color: #00a16e;
+}
+tr > th:first-child,
+tr > td:first-child {
+  padding-left: 2em;
+}
+.contracts_input {
+  width: 10em;
+}
+.contract_input_box {
+  display: flex;
+  margin-left: 2.6em;
+}
+.contracts_info {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow: auto;
+}
+.contracts_info_bg {
+  background-color: rgba(0, 0, 0, 0.26);
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+}
+.contracts_info_body {
+  width: 100%;
+  background: white;
+  padding: 1em 2em;
+}
+.cont_ibh {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  border-bottom: 0.06em solid rgb(228, 228, 228);
+}
+.cont_ar_icon {
+  font-size: 0.9em;
+  color: rgb(87, 87, 87);
+  margin-right: 0.4em;
+}
+.cont_eim {
+  padding: 1em;
+  border: 0.1em solid rgb(139, 139, 139);
+  cursor: pointer;
+}
+.cont_ei_btn_box {
+  margin-top: 2em;
+}
+.cont_eimi {
+  padding: 1em;
+  border: 0.1em solid rgb(139, 139, 139);
+  border-top: none;
+  max-height: 0em;
+  overflow: auto;
+  display: none;
+  transition: max-height 300ms, height 300ms;
+}
+.cont_eimi_open {
+  display: block;
+  max-height: 15em;
+  animation: cont_eimi_open 500ms;
+}
+.cont_eimi_close {
+  max-height: 0;
+  display: block;
+  animation: cont_eimi_close 500ms forwards;
+}
+@keyframes cont_eimi_open {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 15em;
+    opacity: 1;
+  }
+}
+
+@keyframes cont_eimi_close {
+  0% {
+    max-height: 15em;
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+  }
+}
+.contracts_info_body_box {
+  width: 90%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 3em;
+}
+.cont_ar_icon {
+  transform: rotate(0deg);
+  transition: transform 300ms;
+}
+.cont_ar_icon_open {
+  transform: rotate(90deg);
+}
+.cont_otq {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  /* overflow: auto; */
+}
+.cont_otq_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.26);
+}
+.cont_otq_item {
+  position: absolute;
+  width: 30em;
+  height: calc(100vh - 6em);
+  padding: 1em 2em;
+  top: 4em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  overflow: auto;
+}
+.cont_download_items {
+  font-size: 0.9em;
+  color: green;
+}
+.add_again_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add_again_items_x {
+  position: relative;
+  top: 0.5em;
+}
+.contract_create_contract_cost {
+  display: inline-block;
+  color: rgb(71, 71, 71);
+  margin-right: 0.3em;
+  width: 8em;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+.date_picker_input_container {
+  display: flex;
+  margin: 1em 0;
+  margin-left: 2.6em;
+}
+.date_picker_input_box {
+  width: 10em;
+}
+.date_picker_input {
+  padding: 0.3em 0.8em;
+  font-size: 0.9em;
+  width: 100%;
+  border-top-right-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  border: 0.1em solid #919191;
+  outline: none;
+}
+.react-datepicker__close-icon::after {
+  background-color: rgb(136, 136, 136) !important;
+}
+.date_inputs_with_info {
+  display: flex;
+  align-items: center;
+}
+.date_input_info {
+  border: 0.1em solid #919191;
+  border-right: none;
+  padding: 0.3em 0.8em;
+  font-size: 0.9em;
+  border-top-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  cursor: pointer;
+}

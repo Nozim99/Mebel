@@ -1,0 +1,122 @@
+.product_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product_header span {
+  margin: 1.4em 2.3em;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+.product_img_box {
+  width: 25em;
+  height: 25em;
+  background-size: cover;
+  background-position: center;
+  border: 0.3em solid rgb(211, 211, 211);
+  margin-left: 3em;
+}
+.product_img_box img {
+  width: 100%;
+  height: 100%;
+}
+.product_info {
+  margin-top: 1.4em;
+  margin-left: 3em;
+}
+.product_price {
+  font-size: 1.5em;
+  color: rgb(46, 46, 46);
+}
+.product_price_num {
+  font-weight: 500;
+  color: black;
+}
+.product_description_box {
+  margin-top: 1em;
+  font-size: 1.5em;
+  color: rgb(46, 46, 46);
+}
+.product_description {
+  color: black;
+  font-size: 1.4em;
+  margin-top: 0.4em;
+}
+.product_btn {
+  margin-right: 3em;
+}
+.product_change_box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.13);
+  top: 0;
+}
+.product_change {
+  position: fixed;
+  padding: 2em;
+  right: 0;
+  top: 0;
+  width: 22em;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+  animation: rightModal 300ms;
+}
+@keyframes rightModal {
+  from {
+    right: -19em;
+  }
+  to {
+    right: 0;
+  }
+}
+.product_change_input_name {
+  display: block;
+  padding: 2em 0 0.3em;
+}
+.product_change_input_name_box,
+.mahsulotlar_category_section,
+.product_change input,
+.product_change textarea {
+  padding: 0.3em 0.8em;
+  border-radius: 0.3em;
+  outline: none;
+  border: 0.1em solid rgb(177, 177, 177);
+  width: 100%;
+  font-size: .9em;
+}
+.mahsulotlar_category_section {
+  width: 100%;
+}
+.product_change textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+}
+.product_change_header {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.1em;
+  color: rgb(73, 73, 73);
+  display: flex;
+  align-items: center;
+}
+.product_change_header svg {
+  margin-right: 1em;
+  font-size: 1.1em;
+  color: rgb(90, 90, 90);
+  cursor: pointer;
+}
+.product_change_btn {
+  margin-top: 1.5em;
+}
+@keyframes opacityNone {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

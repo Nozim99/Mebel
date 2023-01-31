@@ -1,0 +1,63 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 3em;
+  box-shadow: 0 0 0.1em;
+}
+.nav_logo {
+  width: 4em;
+  cursor: pointer;
+  margin-left: 1em;
+}
+.nav_account {
+  position: relative;
+  cursor: pointer;
+}
+.nav_account_name {
+  margin: 0 0.2em 0 0.4em;
+}
+.nav_accont_angle {
+  font-size: 0.8em;
+  color: rgb(70, 70, 70);
+}
+.nav_account_user {
+  font-size: 0.9em;
+}
+.nav_account_modals {
+  position: absolute;
+  top: 2em;
+  right: 0;
+  background: white;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  z-index: 2;
+  animation: logoutModal 300ms;
+}
+@keyframes logoutModal {
+  from{
+    top: 0;
+    opacity: .3;
+    transform: scale(.4);
+  }
+  to{
+    top: 2em;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.nav_account_modal {
+  padding: 0.4em 1em;
+  width: 6.7em;
+  box-shadow: 0 0 .1em;
+  font-size: .9em;
+  font-weight: 500;
+  color: rgb(71, 71, 71);
+}
+.nav_account_modal:hover {
+  background-color: rgb(241, 241, 241);
+}
+.nav_account_modal svg {
+  color: rgb(63, 63, 63);
+  font-size: 0.9em;
+}

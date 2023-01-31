@@ -1,0 +1,179 @@
+.mahsulotlar {
+  display: flex;
+  justify-content: space-between;
+}
+.mahsulotlar_box {
+  width: 100%;
+  position: relative;
+  background: white;
+  margin: 1em;
+  border-radius: 0.4em;
+}
+.mahsulotlar_items {
+  box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.322);
+  border-radius: 0.3em;
+  margin: 1em 3em;
+  background: white;
+  box-shadow: 0 0 0.2em rgb(88, 88, 88);
+  height: 29.3em;
+  overflow: auto;
+}
+.mahsulotlar_items_names {
+  padding: 1em;
+  border-bottom: 0.1em solid rgba(56, 56, 56, 0.575);
+}
+.mahsulotlar_item {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  cursor: pointer;
+  border-bottom: 0.1em solid rgb(207, 205, 205);
+}
+.categories_items {
+  border-bottom: none;
+  display: block;
+}
+.mahsulotlar_item:hover {
+  background: rgba(243, 243, 243, 0.815);
+  box-shadow: 0 0 0.5em #00eeff;
+}
+.mahsulotlar_items_names > div,
+.mahsulotlar_item > div {
+  display: inline-block;
+}
+.mahsulotlar_item > div:first-child,
+.mahsulotlar_item > div:nth-child(2),
+.mahsulotlar_items_names > div:first-child,
+.mahsulotlar_items_names > div:nth-child(2) {
+  width: 4%;
+}
+.category_names > div:first-child {
+  width: 100%;
+}
+.mahsulotlar_item > div:nth-child(3),
+.mahsulotlar_items_names > div:nth-child(3) {
+  width: 50%;
+}
+.mahsulotlar_item > div:nth-child(4),
+.mahsulotlar_item > div:nth-child(5),
+.mahsulotlar_items_names > div:nth-child(4),
+.mahsulotlar_items_names > div:nth-child(5) {
+  width: 21%;
+}
+.mahsulotlar_item_img {
+  width: 2em;
+  height: 2em;
+  object-fit: cover;
+  object-position: 50% 50%;
+  padding: 0.2em;
+  box-shadow: 0 0 0.1em rgb(155, 155, 155);
+  border-radius: 0.3em;
+  margin-right: 0.8em;
+}
+.mahsulotlar_item_click {
+  display: flex;
+  align-items: center;
+}
+.mahsulotlar_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em 3em 1em;
+}
+.mahsulotlar_breadcrumb {
+  margin: 2em 0 0 3em;
+}
+.mahsulotlar_create_modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  /* text-align: center; */
+  padding: 2em 5em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.356);
+  border-radius: 0.5em;
+}
+.mahsulotlar_modal_item {
+  position: relative;
+  margin: 1.5em 0;
+}
+.mahsulotlar_modal_item input,
+.mahsulotlar_modal_item textarea {
+  width: 100%;
+  padding: 0.5em 1em;
+  border-radius: 0.4em;
+  outline: none;
+  border: 0.1em solid rgb(138, 137, 137);
+}
+.mahsulotlar_modal_item div {
+  position: absolute;
+  top: 0.4em;
+  left: 0.7em;
+  font-size: 0.9em;
+  color: rgb(78, 78, 78);
+  pointer-events: none;
+  transition: all 300ms;
+}
+.mahsulotlar_modal_item textarea {
+  font-family: "Roboto", sans-serif;
+}
+.mahsulotlar_modal_item input:focus + div,
+.mahsulotlar_modal_item input:valid + div,
+.mahsulotlar_modal_item textarea:focus + div,
+.mahsulotlar_modal_item textarea:valid + div {
+  font-size: 0.75em;
+  top: -1.2em;
+}
+.mahsulotlar_modal_item input:focus + div .red,
+.mahsulotlar_modal_item input:valid + div .red,
+.mahsulotlar_modal_item textarea:focus + div .red,
+.mahsulotlar_modal_item textarea:valid + div .red {
+  display: none;
+}
+.mahsulotlar_create_modal h1 {
+  text-align: center;
+  font-size: 1.7em;
+}
+.mahsulotlar_modal_item_img {
+  margin: 1em 0;
+}
+.mahsulotlar_modal_item_img div {
+  margin-bottom: 0.3em;
+  font-size: 0.93em;
+  color: rgb(66, 66, 66);
+}
+#input_image {
+  /* border: .1em solid; */
+  display: none;
+}
+/* #input_image::file-selector-button{
+  display: none;
+} */
+.product_change_input_name_box {
+  display: block;
+  font-size: 0.9em;
+}
+.product_change_input_name_box svg {
+  color: rgb(61, 61, 61);
+}
+.mahsulotlar_uploaded_img {
+  font-size: 0.9em;
+  margin-top: 0.3em;
+}
+.mahsulotlar_uploaded_img svg {
+  color: rgb(44, 44, 44);
+  font-size: 0.8em;
+}
+.mahsulotlar_items_null {
+  font-size: 1.6em;
+  text-align: center;
+  margin: 1em;
+}
+.mahsulotlar_lists {
+  cursor: pointer;
+}
+.mahsulotlar_lists:hover {
+  box-shadow: 0 0 0.2em #1ea57a;
+  background-color: #2fac841c;
+}
